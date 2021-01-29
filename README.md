@@ -6,14 +6,14 @@ This project contains a fictional restaurant website named ***Ka\[mains\]yan***.
 The purpose of this project is to familiarize the learners in using Bootstrap. The duration is 4 days (minus the weekends) so I created a timeline to manage my time in this stages.
 
 ## Initial Timeline
-1.  ### __Planning__ - 28 January 2021 (1 day) -  ___In Progress___
+1.  ### __Planning__ - 28 January 2021 (1 day) -  ___Done___
     - [x] Restaurant name
     - [x] Content
     - [x] Pictures
-2. ### __Design__ - 28 January 2021 (1 day)
+2. ### __Design__ - 28 January 2021 (1 day) - ___In Progress___
     - [x] Logo
-    - [ ] Mockups of Pages
-3.  ### __Implementation__ - 29 January until 30 January 2021 (2 days)
+    - [ ] Prototypes 
+3.  ### __Implementation__ - 29 January until 1 February 2021 (2 days + weekends)
     - [ ] Welcome
     - [ ] Menu
     - [ ] Pictures
@@ -30,4 +30,4 @@ The purpose of this project is to familiarize the learners in using Bootstrap. T
 - BOOTSTRAP 5
   
 ## Credits
-coming soon
+Photos: [Unsplash](https://unsplash.com/)
