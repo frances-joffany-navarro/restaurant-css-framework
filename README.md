@@ -10,10 +10,10 @@ The purpose of this project is to familiarize the learners in using Bootstrap. T
     - [x] Restaurant name
     - [x] Content
     - [x] Pictures
-2. ### __Design__ - 29 January 2021 (1 day) - ___In Progress___
+2. ### __Design__ - 29 January 2021 (1 day) - ___Done___
     - [x] Logo
-    - [ ] Prototypes 
-3.  ### __Implementation__ - 29 January until 1 February 2021 (2 days + weekends)
+    - [x] Prototypes 
+3.  ### __Implementation__ - 29 January and 1 February 2021 (2 days) ___In Progress___
     - [ ] Welcome
     - [ ] Menu
     - [ ] Pictures
@@ -28,6 +28,13 @@ The purpose of this project is to familiarize the learners in using Bootstrap. T
 - HTML5
 - CSS3
 - BOOTSTRAP 5
+
+## Mockup Images 
+- for mobile
+![Mobile Sketch](documentation/mobile_sketch.jpg)
+![Mobile Sketch](documentation/medium_sketch.jpg)
+
+-for tablet
   
 ## Credits
 Photos: [Unsplash](https://unsplash.com/)
