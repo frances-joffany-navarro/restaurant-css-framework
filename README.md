@@ -30,11 +30,11 @@ The purpose of this project is to familiarize the learners in using Bootstrap. T
 - BOOTSTRAP 5
 
 ## Mockup Images 
-- for mobile
+- Mobile Sketch
 ![Mobile Sketch](documentation/mobile_sketch.jpg)
-![Mobile Sketch](documentation/medium_sketch.jpg)
 
--for tablet
+- Tablet/Desktop Sketch
+![Mobile Sketch](documentation/medium_sketch.jpg)
   
 ## Credits
 Photos: [Unsplash](https://unsplash.com/)
