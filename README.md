@@ -10,7 +10,7 @@ The purpose of this project is to familiarize the learners in using Bootstrap. T
     - [x] Restaurant name
     - [x] Content
     - [x] Pictures
-2. ### __Design__ - 28 January 2021 (1 day) - ___In Progress___
+2. ### __Design__ - 29 January 2021 (1 day) - ___In Progress___
     - [x] Logo
     - [ ] Prototypes 
 3.  ### __Implementation__ - 29 January until 1 February 2021 (2 days + weekends)
