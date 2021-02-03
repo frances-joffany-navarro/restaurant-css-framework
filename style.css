@@ -3,7 +3,6 @@ body,html{height:100vh;}
 body{
     background: url(images/background.jpg); 
     background-size: cover;
-
 }
 #home_header{
     background: url(images/food1.jpg); 
