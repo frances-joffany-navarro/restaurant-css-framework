@@ -10,8 +10,13 @@ body{
     background-position: center;
 }
 
-h1,h2,h3,h4,h5,li,label{font-family: 'Yusei Magic', sans-serif;}
-p,a,input,select,textarea,button{font-family: 'Montserrat', sans-serif;}
+h1,h2,h3,h4,h5,li,label{
+    font-family: 'Yusei Magic', sans-serif;
+}
+p,a,input,select,textarea,button{
+    font-family: 'Montserrat', sans-serif;
+    
+}
 
 /*Menu Page*/
 #menu1{
@@ -32,6 +37,8 @@ p,a,input,select,textarea,button{font-family: 'Montserrat', sans-serif;}
         background-repeat:no-repeat; 
     }
 }
+
+#menu1, #menu2{text-align: justify;}
 /*Images Page*/
 #page1,#page2,#page3,#page4,#contact_section{
     max-width: 500px;
