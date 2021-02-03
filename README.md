@@ -3,14 +3,14 @@
 This project contains a fictional restaurant website named ***Ka\[mains\]yan***. This name derived from the word "Kamayan". It is a Filipino word means "eat with your hands". This is a traditionnal way of eating in the Philippines. 
 
 
-The purpose of this project is to familiarize the learners in using Bootstrap. I created a timeline to manage my time in this stages.
+The purpose of this project is to familiarize the learners in using Bootstrap. This is a solo project and I created a timeline to manage my time in this stages.
 
 ## Website URL 
 [https://frances-joffany-navarro.github.io/restaurant-css-framework/](https://frances-joffany-navarro.github.io/restaurant-css-framework/)
 ## Instruction link
 [https://github.com/becodeorg/BXL-Swartz-4-27/blob/master/1.The-Field/6.Bootstrap/restaurant.adoc](https://github.com/becodeorg/BXL-Swartz-4-27/blob/master/1.The-Field/6.Bootstrap/restaurant.adoc)
 
-## Initial Timeline
+## Timeline
 1.  ### __Planning__ - 28 January 2021 -  ___Done___
     - [x] Restaurant name
     - [x] Content
@@ -20,14 +20,14 @@ The purpose of this project is to familiarize the learners in using Bootstrap. I
     - [x] Logo
     - [x] Prototypes 
   
-3.  ### __Implementation__ - 29 January and 03 February 2021 - Done
+3.  ### __Implementation__ - 29 January and 03 February 2021 - ___Done___
     - [x] Welcome 
     - [x] Menu
     - [x] Pictures
     - [x] Restaurant
     - [x] Contact
   
-4. ### __Documentation / Finalize__ - 03 February - (1 day)
+4. ### __Documentation / Finalize__ - 03 February 2021 - ___Done___
 
 ## Language to use
 - HTML5
