@@ -20,16 +20,14 @@ The purpose of this project is to familiarize the learners in using Bootstrap. I
     - [x] Logo
     - [x] Prototypes 
   
-3.  ### __Implementation__ - 29 January and 02 February 2021 (2 days) ___In Progress___
-    - [ ] Welcome 
-    - [ ] Menu
-    - [ ] Pictures
-    - [ ] Restaurant
-    - [ ] Contact
+3.  ### __Implementation__ - 29 January and 02 February 2021 (2 days) Done
+    - [x] Welcome 
+    - [x] Menu
+    - [x] Pictures
+    - [x] Restaurant
+    - [x] Contact
   
-4. ### __Documentation / Finalize__ - 02 February 2021 (1 day)
-
-
+4. ### __Documentation / Finalize__ - 03 February 2021 (1 day)
 
 ## Language to use
 - HTML5
@@ -44,4 +42,6 @@ The purpose of this project is to familiarize the learners in using Bootstrap. I
 ![Mobile Sketch](documentation/medium_sketch.jpg)
   
 ## Credits
-Photos: [Unsplash](https://unsplash.com/)
+### Photos: [Unsplash](https://unsplash.com/)
+### Icons: [FontAwesome](https://fontawesome.com/)
+### Fonts: [Yusei Magic - Google Font](https://fonts.google.com/specimen/Yusei+Magic?preview.text_type=custom)
