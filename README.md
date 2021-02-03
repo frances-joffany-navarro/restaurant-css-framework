@@ -20,7 +20,7 @@ The purpose of this project is to familiarize the learners in using Bootstrap. I
     - [x] Logo
     - [x] Prototypes 
   
-3.  ### __Implementation__ - 29 January and 02 February 2021 (2 days) Done
+3.  ### __Implementation__ - 29 January and 03 February 2021 (3 days) Done
     - [x] Welcome 
     - [x] Menu
     - [x] Pictures
