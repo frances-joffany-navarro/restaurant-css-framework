@@ -1,7 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Yusei+Magic&display=swap');
-
 body,html{height:100vh;}
-body{background: url("images/beto-galetto-hN1zEipJ0qc-unsplash.jpg"); }
+#home_header{
+    background: url(/images/food1.jpg); 
+    background-size: cover; 
+    background-position: center;
+}
 h1,h2,h3,h4,h5,li,label{font-family: 'Yusei Magic', sans-serif;}
 p,a,input,select,textarea,button{font-family: 'Montserrat', sans-serif;}
-#proteinSection{background: url("images/ammy123-paifueai-n5-UscRGkxU-unsplash.jpg");}
+
+/*Menu*/
+#menu1{
+    background: url(/images/collage1.jpg); 
+    background-size: contain; 
+    background-position:bottom center;
+    background-repeat:no-repeat;
+}
+@media only screen and (max-width:768px){
+    #menu1{background:none;}
+    
+}
+@media only screen and (min-width:768px) and (max-width:992px){
+    #menu1{
+        background: url(/images/collage2.jpg);
+        background-size: contain; 
+        background-position:bottom center;
+        background-repeat:no-repeat; 
+    }
+}
+/*Images*/
+#page1,#page2,#page3,#page4,#contact_section{
+    max-width: 500px;
+    margin: auto;
+}
