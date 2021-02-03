@@ -1,13 +1,25 @@
+/*General style*/
 body,html{height:100vh;}
+body{
+    background: url(images/background.jpg); 
+    background-size: cover;
+
+}
 #home_header{
     background: url(images/food1.jpg); 
     background-size: cover; 
     background-position: center;
 }
+
 h1,h2,h3,h4,h5,li,label{font-family: 'Yusei Magic', sans-serif;}
 p,a,input,select,textarea,button{font-family: 'Montserrat', sans-serif;}
 
-/*Menu*/
+/*Home Page*/
+#home_header{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*Menu Page*/
 #menu1{
     background: url(images/collage1.jpg); 
     background-size: contain; 
@@ -26,7 +38,7 @@ p,a,input,select,textarea,button{font-family: 'Montserrat', sans-serif;}
         background-repeat:no-repeat; 
     }
 }
-/*Images*/
+/*Images Page*/
 #page1,#page2,#page3,#page4,#contact_section{
     max-width: 500px;
     margin: auto;
