@@ -1,38 +1,31 @@
-# Restaurant Website Project
+# Restaurant 2.0
 
-This project contains a fictional restaurant website named ***Ka\[mains\]yan***. This name derived from the word "Kamayan". It is a Filipino word means "eat with your hands". This is a traditionnal way of eating in the Philippines. 
+This project contains a fictional restaurant website named ***Ka\[mains\]yan***. This name derived from the word "Kamayan". It is a Filipino word means "eat with your hands". This is a traditional way of eating in the Philippines. 
 
+This repository is being updated to add additionnal feature. The purpose of this new project is to familiarize the learners in using PHP.
 
-The purpose of this project is to familiarize the learners in using Bootstrap. This is a solo project and I created a timeline to manage my time in this stages.
+This repository updated March 22, 2021
 
-## Website URL 
-[https://frances-joffany-navarro.github.io/restaurant-css-framework/](https://frances-joffany-navarro.github.io/restaurant-css-framework/)
+## Website URL - coming soon!
+[]()
+
 ## Instruction link
-[https://github.com/becodeorg/BXL-Swartz-4-27/blob/master/1.The-Field/6.Bootstrap/restaurant.adoc](https://github.com/becodeorg/BXL-Swartz-4-27/blob/master/1.The-Field/6.Bootstrap/restaurant.adoc)
+[https://github.com/becodeorg/BXL-Swartz-4-27/blob/master/2.The-Hill/2.PHP/Restaurant2.0PHP.md](https://github.com/becodeorg/BXL-Swartz-4-27/blob/master/2.The-Hill/2.PHP/Restaurant2.0PHP.md)
 
 ## Timeline
-1.  ### __Planning__ - 28 January 2021 -  ___Done___
-    - [x] Restaurant name
-    - [x] Content
-    - [x] Pictures
+1. ### __Planning__ 
   
-2. ### __Design__ - 29 January 2021 - ___Done___
-    - [x] Logo
-    - [x] Prototypes 
+2. ### __Design__
   
-3.  ### __Implementation__ - 29 January and 03 February 2021 - ___Done___
-    - [x] Welcome 
-    - [x] Menu
-    - [x] Pictures
-    - [x] Restaurant
-    - [x] Contact
+3. ### __Implementation__
   
-4. ### __Documentation / Finalize__ - 03 February 2021 - ___Done___
+4. ### __Documentation / Finalize__
 
-## Language to use
+## Language used
 - HTML5
 - CSS3
 - BOOTSTRAP 5
+- PHP
 
 ## Mockup Images 
 - Mobile Sketch
