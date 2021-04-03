@@ -10,12 +10,7 @@ if(isset($_POST['submit'])){
         $validity['username'] = "is-invalid";
     }else {
         $user = filter_var($_POST['username'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "restaurant_dbase";
-
-        try{
+        
             include("config/db_connect.php");
             //write query
             $stmt = $conn -> prepare("SELECT username, password FROM user WHERE username = '$user'");

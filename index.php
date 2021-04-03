@@ -1,10 +1,4 @@
-<?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "restaurant_dbase";
-
-    try{
+<?php    
         include("config/db_connect.php");
         //write query
         $stmt = $conn -> prepare("SELECT * FROM emails");

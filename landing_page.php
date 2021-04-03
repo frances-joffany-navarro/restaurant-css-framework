@@ -5,6 +5,12 @@ $username = "root";
 $password = "";
 $dbname = "restaurant_dbase";
 
+/*$servername = "localhost";
+$username = "id16468211_admin";
+$password = "Kamainsyan@03222021";
+$dbname = "id16468211_restaurant_dbase";*/
+
+// show messages from database
 try {
     include "config/db_connect.php";
     //write query
@@ -23,6 +29,7 @@ try {
 }
 $conn = null;
 
+// delete messages from Database
 if (isset($_GET['id'])) {
     $id_to_delete = htmlspecialchars($_GET['id']);
     try {
@@ -42,6 +49,112 @@ if (isset($_GET['id'])) {
     }
     $conn = null;
 }
+
+//Upload image and save image information to database
+//Check if image file is a actual image or fake images
+if(isset($_POST["upload"])){
+  $target_dir = "images/gallery/";
+  $target_file = $target_dir . basename($_FILES["imageToUpload"]["name"]);
+  $uploadOk = 1;
+  $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+  $imageName = pathinfo($target_file, PATHINFO_FILENAME);
+  $check = getimagesize($_FILES["imageToUpload"]["tmp_name"]);
+  
+ if($check !== false){
+    //echo "File is an image - " . $check["mime"]. ".";
+    $uploadOk = 1;
+  } else{
+    echo "File is not an image.";
+    $uploadOk = 0;
+  }
+
+  //Check file size
+  if($_FILES["imageToUpload"]["size"] > 500000){
+  echo "Sorry, your file is too large.";
+  $uploadOk = 0;
+  }
+
+  //Allow certain files formats
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"){
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+  }
+
+  if($uploadOk == 0){
+    echo "Sorry, your file was not uploaded.";
+  }else{
+    if(move_uploaded_file($_FILES["imageToUpload"]["tmp_name"],$target_file)){
+        /*$servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "restaurant_dbase";*/
+
+        try {
+          include("config/db_connect.php");
+
+          //prepare sql and bind parameters
+          $stmt = $conn->prepare("INSERT INTO gallery (image_name, image_directory) VALUES (?, ?)");
+          $stmt->bindParam(1, $img_name);
+          $stmt->bindParam(2, $img_dir);
+
+          //insert row
+          $img_name = $imageName;
+          $img_dir = $target_file;
+          $stmt->execute();
+
+          //display
+          echo "The file " . htmlspecialchars(basename($_FILES["imageToUpload"]["name"])) . " has been uploaded."; 
+          header('Location: landing_page.php');
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $conn = null;
+    }else{
+      echo "Sorry, there was an error uploading the file.";
+    }
+  }
+}
+
+// show gallery from database
+try {
+  include "config/db_connect.php";
+  //write query
+  $stmt = $conn->prepare("SELECT id, image_name, image_directory, timestamp FROM gallery ORDER BY timestamp DESC");
+  //execute query
+  $stmt->execute();
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  //fetch the result
+  $images = $stmt->fetchAll();
+
+  //print_r($images);
+
+} catch (PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
+$conn = null;
+
+// delete messages from Database
+if (isset($_GET['image_id'])) {
+  $image_id_to_delete = htmlspecialchars($_GET['image_id']);
+  try {
+      include "config/db_connect.php";
+      //write query
+      $stmt = $conn->prepare("DELETE FROM gallery WHERE id = :id_to_delete");
+      $stmt->bindParam(':id_to_delete', $image_id_to_delete);
+      $image_id_to_delete = $image_id_to_delete;
+
+      //execute query
+      $stmt->execute();
+
+      //$success = "Image deleted successfully";
+      header('Location: landing_page.php');
+  } catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
+  }
+  $conn = null;
+}
+
 
 ?>
 
@@ -79,54 +192,85 @@ if (isset($_GET['id'])) {
         <!-- Tab panes -->
         <div class="tab-content" id="v-pills-tabContent">
           <!-- Messages Panel -->
-          <div class="tab-pane fade show active shadow" style="max-height:400px; width:1100px; background-color: rgba(212, 211, 211, 0.5);" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            <div class="table-responsive mh-100">
-              <table class="table table-striped table-hover text-center table-bordered" >
-                <thead class='table-light'>
-                  <tr>
-                    <th>Timestamp</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Message</th>
-                    <th>Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php if(array_filter($messages)){ foreach ($messages as $message){?>
-                    <tr>
-                    <td><?php echo htmlspecialchars($message['created_at']); ?></td>
-                    <td><?php echo htmlspecialchars($message['name']); ?></td>
-                    <td><?php echo htmlspecialchars($message['email']); ?></td>
-                    <td><?php echo htmlspecialchars($message['message']); ?></td>
-                    <td>
-                      <a href="landing_page?id=<?php echo $message['id']; ?>" class="btn btn-danger" id="liveToastBtn"><i class='fas fa-trash-alt fa-lg'></i> Delete</a>
-                    </td>
-                    </tr>
-                  <?php } }else{?>
-                    <tr>
-                    <td colspan="5"> No result</td>
-                    </tr>
-                  <?php }?>
-                </tbody>
-              </table>
-            </div>
+          <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <!--<div class="row">
+              <div class="col-12 ">-->
+                <div class="table-responsive-sm" style="max-height:400px; background-color: rgba(212, 211, 211, 0.5);">
+                  <table class="container-fluid table table-striped table-hover text-center table-bordered " >
+                    <thead class='table-light'>
+                      <tr>
+                        <th scope="col">Timestamp</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Message</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php if(array_filter($messages)){ foreach ($messages as $message){?>
+                        <tr>
+                        <td><?php echo htmlspecialchars($message['created_at']); ?></td>
+                        <td><?php echo htmlspecialchars($message['name']); ?></td>
+                        <td><?php echo htmlspecialchars($message['email']); ?></td>
+                        <td><?php echo htmlspecialchars($message['message']); ?></td>
+                        <td>
+                          <a href="landing_page?id=<?php echo $message['id']; ?>" class="btn btn-danger" id="liveToastBtn"><i class='fas fa-trash-alt fa-lg'></i> Delete</a>
+                        </td>
+                        </tr>
+                      <?php } }else{?>
+                        <tr>
+                        <td colspan="5"> No Messages</td>
+                        </tr>
+                      <?php }?>
+                    </tbody>
+                  </table>
+                </div>
+              <!--</div>              
+            </div>-->           
           </div>
           <!-- Guestbook Panel -->
           <div class="tab-pane fade" id="v-pills-guestbook" role="tabpanel" aria-labelledby="v-pills-guestbook-tab">Guestbook Panel</div>
           <!-- Gallery Panel -->
           <div class="tab-pane fade" id="v-pills-gallery" role="tabpanel" aria-labelledby="v-pills-gallery-tab">
             <!-- Upload form -->
-            <form action="landing_page.php" method="post" enctype="multipart/form-data" class="row">
-              <div class="col-12 fs-3">
-                <label for="formFileLg" class="form-label">Upload an image</label>
-              </div>
-              <div class="col-auto">                
-                <input class="form-control form-control-lg" id="formFileLg" type="file">
-              </div>
-              <div class="col-auto align-text-bottom">
-                <button type="submit" name="submit" class="btn btn-success btn-lg"><i class="fas fa-upload"></i> Upload</button>   
-              </div>          
+            <form action="landing_page.php" method="post" enctype="multipart/form-data" class="row mb-3">
+                <div class="col-12 fs-3">
+                  <label for="formFileLg" class="form-label">Upload an image</label>
+                </div>
+                <div class="col-auto">                
+                  <input class="form-control form-control-lg" name="imageToUpload" id="formFileLg" type="file">
+                </div>
+                <div class="col-auto align-text-bottom">
+                  <button type="submit" name="upload" class="btn btn-success btn-lg"><i class="fas fa-upload"></i> Upload</button>   
+                </div>        
             </form>
+                       
+            <div class="table-responsive" style="max-height:300px; background-color: rgba(212, 211, 211, 0.5);">
+              <table class="table table-striped table-hover text-center table-bordered align-middle" >
+                <thead class='table-light'>
+                  <tr>
+                    <th>Date</th>
+                    <th>Image</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if(array_filter($images)){ foreach ($images as $image){?>
+                    <tr>
+                    <td><?php echo htmlspecialchars($image['timestamp']); ?></td>
+                    <td><img src="<?php echo htmlspecialchars($image['image_directory']); ?>" alt="<?php echo htmlspecialchars($image['image_name']); ?>" class="img-thumbnail" width="100px"></td>
+                    <td>
+                      <a href="landing_page?image_id=<?php echo $image['id']; ?>" class="btn btn-danger" id="liveToastBtn"><i class='fas fa-trash-alt fa-lg'></i> Delete</a>
+                    </td>
+                    </tr>
+                  <?php } }else{?>
+                    <tr>
+                    <td colspan="3"> No Images</td>
+                    </tr>
+                  <?php }?>
+                </tbody>
+              </table>
+            </div>
           </div>
           <p class="fw-bold text-success"><?php //echo $success ?></p>
         </div>

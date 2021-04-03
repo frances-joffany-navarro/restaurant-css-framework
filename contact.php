@@ -67,12 +67,7 @@ if(isset($_POST['submit'])){
         //echo "There is an error on the form";
         //print_r(array_filter($errors));
     }else{
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "restaurant_dbase";
-
-        try {
+        
             include("config/db_connect.php");
 
             //prepare sql and bind parameters
