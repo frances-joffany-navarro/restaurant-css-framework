@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5,li,label{
 }
 p,a,input,select,textarea,button{
     font-family: 'Montserrat', sans-serif;
-    
+    text-decoration: none;
 }
 
 /*Menu Page*/
@@ -43,4 +43,17 @@ p,a,input,select,textarea,button{
 #page1,#page2,#page3,#page4,#contact_section{
     max-width: 500px;
     margin: auto;
+}
+
+#login_section{
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(212, 211, 211,0.9);
+}
+
+.panelHeight{
+    max-height: 100px;
+}
+.table_style{
+    background-color: rgba(212, 211, 211, 1);
 }
