@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
         //print_r(array_filter($errors));
     }else{
         
-            include("config/db_connect.php");
+            include 'config/db_connect.php';
 
             //prepare sql and bind parameters
             $stmt = $conn->prepare("INSERT INTO emails (firstname, lastname, email, subject, message) VALUES (?, ?, ?, ?, ?)");
@@ -89,9 +89,7 @@ if(isset($_POST['submit'])){
             //display
             $success = "Your email sent successfully";
             header('Location: contact.php');
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
+      
         $conn = null;
     }
 }

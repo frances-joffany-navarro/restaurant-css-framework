@@ -8,10 +8,10 @@ if(isset($_POST['submit'])){
     if(empty($_POST['username'])){
         $errors['username'] = "Please enter your username.";
         $validity['username'] = "is-invalid";
-    }else {
+    } else {
         $user = filter_var($_POST['username'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         
-            include("config/db_connect.php");
+            include 'config/db_connect.php';
             //write query
             $stmt = $conn -> prepare("SELECT username, password FROM user WHERE username = '$user'");
             //execute query
@@ -27,9 +27,7 @@ if(isset($_POST['submit'])){
                 $errors['username'] = "Username does not exist.";
                 $validity['username'] = "is-invalid";
             }            
-        }catch(PDOException $e){
-            echo "Error: " . $e->getMessage();
-        }
+        
         $conn = null;
     }
     
