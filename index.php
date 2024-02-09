@@ -44,58 +44,54 @@ $conn = null;
             <li class="list-group-item mb-1">
               <section>
                 <h5 class="card-title">Good Friday</h5>
-                <<<<<<< HEAD:index.html <p class="card-text text-muted">April 02,
-                  2021</p>
+                <p class="card-text text-muted">April 02, 2021</p>
               </section>
-              =======
-              <p class="card-text text-muted">April 02, 2021</p>
+
+            </li>
+            <li class="list-group-item mb-1">
+              <section>
+                <h5 class="card-title">Easter Sunday</h5>
+                <p class="card-text text-muted">April 04, 2021</p>
+              </section>
+            </li>
+            <li class="list-group-item mb-1">
+              <section>
+                <h5 class="card-title">Labor Day</h5>
+                <p class="card-text text-muted">May 01, 2021</p>
+              </section>
+            </li>
+          </ul>
+        </main>
       </section>
-      >>>>>>> 257c68cc56bf66370cd77f65d0e8ae8278b34780:index.php
-      </li>
-      <li class="list-group-item mb-1">
-        <section>
-          <h5 class="card-title">Easter Sunday</h5>
-          <p class="card-text text-muted">April 04, 2021</p>
-        </section>
-      </li>
-      <li class="list-group-item mb-1">
-        <section>
-          <h5 class="card-title">Labor Day</h5>
-          <p class="card-text text-muted">May 01, 2021</p>
-        </section>
-      </li>
-      </ul>
-</main>
-</section>
-</section>
-<!--Promos Panel-->
-<section class="col-sm mb-3">
-  <section class="card text-center h-100 col-sm ">
-    <header class="card-header">
-      <h5>Promos</h5>
-    </header>
-    <main class="card-body">
-      <!--Promos-->
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item mb-1">
-          <section>
-            <h5 class="card-title">Valentines Special - Couples Eating Contest</h5>
-            <p class="card-text text-muted">Date of the Promo: February 14, 2021</p>
-            <a href="#" class="btn btn-primary">Details</a>
-          </section>
-        </li>
-        <li class="list-group-item mb-1">
-          <section>
-            <h5 class="card-title">Sunday Fiesta - Drink all you can</h5>
-            <p class="card-text text-muted">Date of the Promo: Every Sunday</p>
-            <a href="#" class="btn btn-primary">Details</a>
-          </section>
-        </li>
-      </ul>
-    </main>
+    </section>
+    <!--Promos Panel-->
+    <section class="col-sm mb-3">
+      <section class="card text-center h-100 col-sm ">
+        <header class="card-header">
+          <h5>Promos</h5>
+        </header>
+        <main class="card-body">
+          <!--Promos-->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item mb-1">
+              <section>
+                <h5 class="card-title">Valentines Special - Couples Eating Contest</h5>
+                <p class="card-text text-muted">Date of the Promo: February 14, 2021</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </section>
+            </li>
+            <li class="list-group-item mb-1">
+              <section>
+                <h5 class="card-title">Sunday Fiesta - Drink all you can</h5>
+                <p class="card-text text-muted">Date of the Promo: Every Sunday</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </section>
+            </li>
+          </ul>
+        </main>
+      </section>
+    </section>
   </section>
-</section>
-</section>
 </main>
 <?php include 'templates/footer.php' ?>
 
