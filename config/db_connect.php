@@ -1,7 +1,7 @@
 <?php
 $servername = "mysql";
 $username = "root";
-$password = "root";
+$password = "123";
 $dbname = "restaurant_dbase";
 
 //connect to database
