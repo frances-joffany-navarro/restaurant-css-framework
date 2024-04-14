@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
+$servername = getenv('mysql_server_name');
 $username = "root";
-$password = "123";
+$password = getenv('mysql_server_passwd');
 $dbname = "restaurant_dbase";
 
 //connect to database
