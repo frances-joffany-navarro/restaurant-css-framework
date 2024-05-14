@@ -26,11 +26,11 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Build and push
+    - name: Build and push image
       uses: docker/build-push-action@v5
       with:
-          context: ~/upskill-devops/my-docker-compose/apache
-          file: ~/upskill-devops/my-docker-compose/apache/Dockerfile
+          context: ./upskill-devops/my-docker-compose/apache
+          file: ./upskill-devops/my-docker-compose/apache/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/upskill-devops:webserver
     
