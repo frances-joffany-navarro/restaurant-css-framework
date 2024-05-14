@@ -1,0 +1,36 @@
+name: Update image to dockerhub and run a new instance
+
+on:
+  push:
+    branches: 
+      - "main" 
+
+jobs:
+  update_image:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone frances-joffany-navarro/upskill-devops
+      uses: actions/checkout@v4
+      with:
+        repository: 'frances-joffany-navarro/upskill-devops'
+        path: upskill-devops
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build and push
+      uses: docker/build-push-action@v5
+      with:
+          context: ~/upskill-devops/my-docker-compose/apache
+          file: ~/upskill-devops/my-docker-compose/apache/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/upskill-devops:webserver
+    
