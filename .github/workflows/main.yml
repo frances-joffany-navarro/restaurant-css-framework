@@ -57,6 +57,7 @@ jobs:
           [aws_host]
           ${{ secrets.AWS_IP_ADDRESS }}
           
+          
           [aws_host:vars]
           ansible_user=ubuntu
 
