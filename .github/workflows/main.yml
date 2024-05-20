@@ -61,4 +61,4 @@ jobs:
           ansible_user=ubuntu
 
         options: |
-          --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
+          --verbose --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
