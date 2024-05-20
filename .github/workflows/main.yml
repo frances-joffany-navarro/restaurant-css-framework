@@ -59,7 +59,7 @@ jobs:
           
           [aws_host:vars]
           ansible_user=ubuntu
-          ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+          #ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
         options: |
           --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
