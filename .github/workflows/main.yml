@@ -61,5 +61,6 @@ jobs:
           ansible_user=ubuntu
 
         options: |
+          --ssh-extra-args '-o StrictHostKeyChecking=no'
           --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
           -vvvvvv
