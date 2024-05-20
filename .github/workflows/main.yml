@@ -34,3 +34,28 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/upskill-devops:webserver
     
+  deploy-ansible:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Clone frances-joffany-navarro/upskill-devops
+      uses: actions/checkout@v4
+      with:
+        repository: 'frances-joffany-navarro/upskill-devops'
+        path: upskill-devops
+    
+    - name: Run playbook
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        # Required, playbook filepath
+        playbook: playbook.yaml
+        directory: ./upskill-devops/ansible-automation/automate-deployment
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        inventory: |
+          [aws_host]
+          ${{ secrets.AWS_IP_ADDRESS }}
+
+        options: |
+          --extra-vars docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}
