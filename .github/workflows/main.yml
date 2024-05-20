@@ -62,4 +62,4 @@ jobs:
 
         options: |
           --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
-          --verbose
+          -vvvvvv
