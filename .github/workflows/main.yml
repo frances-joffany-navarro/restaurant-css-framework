@@ -55,8 +55,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         inventory: |
           [aws_host]
-          ${{ secrets.AWS_IP_ADDRESS }}
-          
+          ec2-51-20-79-247.eu-north-1.compute.amazonaws.com
           
           [aws_host:vars]
           ansible_user=ubuntu
