@@ -58,4 +58,4 @@ jobs:
           ${{ secrets.AWS_IP_ADDRESS }}
 
         options: |
-          --extra-vars docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}
+          --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
