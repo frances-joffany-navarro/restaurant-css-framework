@@ -37,7 +37,7 @@ jobs:
   deploy-ansible:
 
     runs-on: ubuntu-latest
-
+    needs: update_image
     steps:
     
     - name: Clone frances-joffany-navarro/upskill-devops
