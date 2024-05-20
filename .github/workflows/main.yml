@@ -56,6 +56,9 @@ jobs:
         inventory: |
           [aws_host]
           ${{ secrets.AWS_IP_ADDRESS }}
+          
+          [aws_host:vars]
+          ansible_user=ubuntu
 
         options: |
           --extra-vars "docker_username=${{ secrets.DOCKERHUB_USERNAME }} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
