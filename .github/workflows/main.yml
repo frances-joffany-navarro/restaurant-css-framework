@@ -62,5 +62,3 @@ jobs:
 
         options: |
           --extra-vars "docker_username=iamfrancesjoffany docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
-          -vvv
-          --ssh-extra-args "-o StrictHostKeyChecking=no"
