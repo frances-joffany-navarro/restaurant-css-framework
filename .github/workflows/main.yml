@@ -66,4 +66,4 @@ jobs:
           ansible_user=ubuntu
 
         options: |
-          --extra-vars "aws_access_key=${{secrets.AWS_ACCESS_KEY}} aws_secret_key=${{secrets.AWS_SECRET_KEY}} docker_username=${{secrets.DOCKERHUB_USERNAME}} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
+          --extra-vars "ssh_public_key=${{secrets.SSH_PUBLIC_KEY}} aws_access_key=${{secrets.AWS_ACCESS_KEY}} aws_secret_key=${{secrets.AWS_SECRET_KEY}} docker_username=${{secrets.DOCKERHUB_USERNAME}} docker_token=${{ secrets.DOCKERHUB_TOKEN }}"
