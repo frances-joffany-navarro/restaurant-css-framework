@@ -46,6 +46,9 @@ jobs:
         repository: 'frances-joffany-navarro/upskill-devops'
         path: upskill-devops
     
+    - name: Install needed packages
+      run: |
+        pip install botocore boto3    
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:
