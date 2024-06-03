@@ -57,6 +57,9 @@ jobs:
           retries = 10        
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         inventory: |
+          [local]
+          localhost
+          
           [aws_host]
           
           [aws_host:vars]
