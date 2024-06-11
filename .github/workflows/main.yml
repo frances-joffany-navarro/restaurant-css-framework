@@ -48,7 +48,7 @@ jobs:
     
     - name: Install needed packages
       run: |
-        pip install botocore boto3   
+        pip install botocore boto3 petname  
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
