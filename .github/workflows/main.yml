@@ -48,6 +48,7 @@ jobs:
     
     - name: Install needed packages
       run: |
+        ansible-galaxy collection install community.general
         pip install petname
 
     - name: Run playbook
