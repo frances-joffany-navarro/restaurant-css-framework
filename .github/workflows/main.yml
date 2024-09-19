@@ -48,7 +48,7 @@ jobs:
     
     - name: Install needed packages
       run: |
-        pip3 install petname
+        pip install petname
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
