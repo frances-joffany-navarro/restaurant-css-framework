@@ -29,10 +29,10 @@ jobs:
     - name: Build and push image
       uses: docker/build-push-action@v5
       with:
-          context: ./upskill-devops/my-docker-compose/apache
-          file: ./upskill-devops/my-docker-compose/apache/Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/upskill-devops:webserver
+        context: ./upskill-devops/my-docker-compose/apache
+        file: ./upskill-devops/my-docker-compose/apache/Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/upskill-devops:webserver
 
   deploy-ansible:
 
@@ -46,10 +46,9 @@ jobs:
         repository: 'frances-joffany-navarro/upskill-devops'
         path: upskill-devops
     
-    - name: Install needed packages
+    - name: list ansible collection
       run: |
-        ansible-galaxy collection install community.general
-        pip install petname
+        ansible-galaxy collection list
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
