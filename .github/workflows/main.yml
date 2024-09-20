@@ -49,8 +49,8 @@ jobs:
     - name: list and install petname
       run: |
         ansible-galaxy collection list
-        sudo apt update
-        pip install petname
+        sudo apt-get update
+        sudo apt-get install golang-petname
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
