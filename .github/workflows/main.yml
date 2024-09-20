@@ -49,7 +49,7 @@ jobs:
     - name: list and install petname
       run: |
         ansible-galaxy collection list
-        sudo pip install petname
+        python setup.py install
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
