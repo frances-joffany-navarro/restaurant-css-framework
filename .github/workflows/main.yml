@@ -63,10 +63,13 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         inventory: |
           [local]
-          localhost ansible_python_interpreter={{ansible_playbook_python}}
+          localhost
           
           [aws_host]
           
+          [local:vars]
+          ansible_python_interpreter=/usr/bin/python
+
           [aws_host:vars]
           ansible_user=ubuntu
 
