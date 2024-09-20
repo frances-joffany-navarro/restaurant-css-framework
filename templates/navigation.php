@@ -15,7 +15,7 @@
                 <li class="nav-item mx-sm-2 mx-md-3 mx-lg-5"><a class="nav-link" href="menu.php"><i class="fas fa-utensils"></i> Menu </a></li>
                 <li class="nav-item mx-sm-2 mx-md-3 mx-lg-5"><a class="nav-link" href="image.php"><i class="far fa-images"></i> Gallery </a></li>
                 <li class="nav-item mx-sm-2 mx-md-3 mx-lg-5"><a class="nav-link" href="restaurant.php"><i class="fas fa-info-circle"></i> About Us </a></li>
-                <li class="nav-item mx-sm-2 mx-md-3 mx-lg-5"><a class="nav-link" href="contact.php"><i class="far fa-address-book"></i> Contact</a></li>
+                <li class="nav-item mx-sm-2 mx-md-3 mx-lg-5"><a class="nav-link" href="contact.php"><i class="far fa-address-book"></i> Contact Us</a></li>
             </ul>
             <a class="btn btn-success" href="login.php" role="button">Log in</a>
         </section>
