@@ -46,10 +46,10 @@ jobs:
         repository: 'frances-joffany-navarro/upskill-devops'
         path: upskill-devops
     
-    - name: list and install petname
-      run: |        
-        ansible-galaxy collection list
-        sudo pip install xkcdpass
+#    - name: list and install petname
+#      run: |        
+#        ansible-galaxy collection list
+#        sudo pip install xkcdpass
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
