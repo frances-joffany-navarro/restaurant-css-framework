@@ -49,6 +49,7 @@ jobs:
     - name: list and install petname
       run: |
         ansible-galaxy collection list
+        apt update
         pip install petname
 
     - name: Run playbook
