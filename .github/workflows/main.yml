@@ -65,6 +65,17 @@ jobs:
           [local]
           localhost
 
+          # Error
+          # Getting a problem with the module petname saying "Petname package is required" but already installed
+          
+          # Problem
+          # if you specify localhost whereever in your inventory, Ansible will default to using /usr/bin/python for running
+          # the modules regardless of the connection:local setting. This cause problems if additional libraries were installed
+          # in a Python environment used to execute playbook, but not for the /usr/bin/python
+
+          # Solution
+          # to specify ansible_python_interpreter for the localhost       
+          
           [local:vars]
           ansible_python_interpreter={{ansible_playbook_python}}
           
